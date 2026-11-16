@@ -1,0 +1,7 @@
+* Tehtävät palautetaan GitHubin kautta ja merkitsemällä tehdyt tehtävät palautussovellukseen: https://studies.cs.helsinki.fi/stats/courses/fullstackopen
+
+* Tehtävät palautetaan yksi osa kerrallaan. Kun olet palauttanut osan tehtävät, et voi enää palauttaa saman osan tekemättä jättämiäsi tehtäviä.
+
+
+
+
