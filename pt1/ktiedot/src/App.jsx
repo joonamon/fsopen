@@ -6,20 +6,24 @@ const Header = (p) => {
   )
 }
 
+// "Part" component to simplify "Content".
+const Part = (props) => {
+  return (
+    <p>
+      {props.topic} {props.numOfExers}
+    </p>
+  )
+}
+
 // This could be made to take any number of parts/exercises.
 // Using fragment instead of div to keep the original structure.
+// Now does its thing using "Part" components rather than by itself.
 const Content = (props) => {
   return ( //
     <>
-      <p>
-        {props.parts[0]} {props.exers[0]}
-      </p>
-      <p>
-        {props.parts[1]} {props.exers[1]}
-      </p>
-      <p>
-        {props.parts[2]} {props.exers[2]}
-      </p>
+      <Part topic={props.topics[0]} numOfExers={props.exers[0]} />
+      <Part topic={props.topics[1]} numOfExers={props.exers[1]} />
+      <Part topic={props.topics[2]} numOfExers={props.exers[2]} />
     </>
   )
 }
@@ -46,7 +50,7 @@ const App = () => {
   return (
     <div>
       <Header titleText={course} />
-      <Content parts={[part1, part2, part3]} exers={[exercises1, exercises2, exercises3]} />
+      <Content topics={[part1, part2, part3]} exers={[exercises1, exercises2, exercises3]} />
       <Total e1={exercises1} e2={exercises2} e3={exercises3} />
     </div>
   )
