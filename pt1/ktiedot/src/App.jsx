@@ -39,26 +39,34 @@ const Total = (props) => {
 
 
 const App = () => {
-  const course = 'Half Stack application development'
-  const parts = [
-    {
-      name: 'Fundamentals of React',
-      exercises: 10
-    },
-    {
-      name: 'Using props to pass data',
-      exercises: 7
-    },
-    {
-      name: 'State of a component',
-      exercises: 14
-    }
-  ]
+  const course = {
+    name: 'Half Stack application development',
+    parts: [
+      {
+        name: 'Fundamentals of React',
+        exercises: 10
+      },
+      {
+        name: 'Using props to pass data',
+        exercises: 7
+      },
+      {
+        name: 'State of a component',
+        exercises: 14
+      }
+    ]
+  }
+  
+  // This is probably fine. We could also pass the whole thing
+  // to the components but this would be silly since, for example,
+  // "Header" only needs the name of the course. We shouldn't be
+  // passing around data that the functions don't actually need
+  // and the code is clearer this way anyway.
   return (
     <div>
-      <Header titleText={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header titleText={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
     </div>
   )
 }
