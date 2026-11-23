@@ -17,7 +17,7 @@ const Part = (props) => {
 
 // This could be made to take any number of parts/exercises.
 // Using fragment instead of div to keep the original structure.
-// Now does its thing using "Part" components rather than by itself.
+// Does its thing using "Part" components rather than by itself.
 const Content = (props) => {
   return (
     <>
@@ -32,7 +32,7 @@ const Content = (props) => {
 // this can sum up any number of exercises given.
 const Total = (props) => {
   return (
-    <p>Number of exercises {props.e1 + props.e2 + props.e3}</p>
+    <p>Number of exercises {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}</p>
   )
 }
 
@@ -40,24 +40,25 @@ const Total = (props) => {
 
 const App = () => {
   const course = 'Half Stack application development'
-  const part1 = {
-    name: 'Fundamentals of React',
-    exercises: 10
-  }
-  const part2 = {
-    name: 'Using props to pass data',
-    exercises: 7
-  }
-  const part3 = {
-    name: 'State of a component',
-    exercises: 14
-  }
-
+  const parts = [
+    {
+      name: 'Fundamentals of React',
+      exercises: 10
+    },
+    {
+      name: 'Using props to pass data',
+      exercises: 7
+    },
+    {
+      name: 'State of a component',
+      exercises: 14
+    }
+  ]
   return (
     <div>
       <Header titleText={course} />
-      <Content parts={[part1, part2, part3]} />
-      <Total e1={part1.exercises} e2={part2.exercises} e3={part3.exercises} />
+      <Content parts={parts} />
+      <Total parts={parts} />
     </div>
   )
 }
