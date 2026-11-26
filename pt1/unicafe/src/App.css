@@ -1,14 +1,14 @@
 /* My very own CSS defaults <3 */
 
 /* 1. Global Body */
-@import "@fontsource-variable/eb-garamond";
+
 body {
   background-color: #1e1e1e;
   color: #e0e0e0;
-  font-family: "EB Garamond Variable", serif;
+  font-family: sans-serif;
   font-size: 18px;
   line-height: normal;
-  margin: 8px;
+  margin: 16px;
   padding: 0;
 }
 
@@ -98,7 +98,9 @@ input, textarea, select {
 
 /* WMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM */
 
+@import "@fontsource-variable/eb-garamond";
 .custom-heading {
+  font-family: "EB Garamond Variable", serif;
   font-size: 3rem;
   color: #2364a5;
   margin-top: 1.5rem;
