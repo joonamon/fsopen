@@ -1,0 +1,135 @@
+/* My very own CSS defaults <3 */
+
+/* 1. Global Body */
+@import "@fontsource-variable/eb-garamond";
+body {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  font-family: "EB Garamond Variable", serif;
+  font-size: 18px;
+  line-height: normal;
+  margin: 8px;
+  padding: 0;
+}
+
+
+/* 2. Headings */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.67em 0;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.83em 0;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 1em 0;
+  color: #ffffff;
+}
+
+
+/* 3. Paragraphs & Text Blocks */
+p {
+  margin: 1em 0;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+
+/* 4. Hyperlinks */
+a {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #a855f7;
+}
+
+
+/* 5. Lists */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 40px;
+}
+
+li {
+  margin: 0;
+}
+
+
+/* 6. Buttons */
+button {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #555555;
+  padding: 1px 6px;
+  font-family: sans-serif;
+  font-size: 13.3333px;
+  cursor: default;
+  border-radius: 2px;
+}
+
+
+/* 7. Form Inputs & Textareas */
+input, textarea, select {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #555555;
+  padding: 2px;
+  font-family: sans-serif;
+  font-size: 13.3333px;
+}
+
+
+/* WMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM */
+
+.custom-heading {
+  font-size: 3rem;
+  color: #2364a5;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.feedback-button {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 1px solid #AAAAAA;
+  padding: 12px 24px;
+  font-family: sans-serif;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.2s;
+}
+
+.feedback-button:hover {
+  background-color: #888888;
+}
+
+.fb-count {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  padding: 12px 24px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+
