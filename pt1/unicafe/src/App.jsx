@@ -8,13 +8,22 @@ const Button = (props) => (
 )
 
 const Statistics = (props) => {
-  return (
-    <div id="statistics">
-      <p>ratings given: {props.nor}</p>
-      <p>average rating: {props.ar.toFixed(2)}</p>
-      <p>percent positive: {props.pp.toFixed(0)}%</p>
-    </div>
-  )
+  if (props.nor !== 0) {
+    return (
+      <div id="statistics">
+        <p>ratings given: {props.nor}</p>
+        <p>average rating: {props.ar.toFixed(2)}</p>
+        <p>percent positive: {props.pp.toFixed(0)}%</p>
+      </div>
+    )
+  }
+  else {
+    return (
+      <div id="statistics">
+        <p>(no feedback yet)</p>
+      </div>
+    )
+  }
 }
 
 const App = () => {
