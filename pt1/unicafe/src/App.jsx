@@ -1,11 +1,19 @@
 import { useState } from 'react'
 import './App.css' // Being stylish results in better feedback
 
-const Button = (props) => {
+const Button = (props) => (
+  <button className="feedback-button" onClick={props.onClick}>
+    {props.text}
+  </button>
+)
+
+const Statistics = (props) => {
   return (
-    <button className="feedback-button" onClick={props.onClick}>
-      {props.text}
-    </button>
+    <div id="statistics">
+      <p>ratings given: {props.nor}</p>
+      <p>average rating: {props.ar.toFixed(2)}</p>
+      <p>percent positive: {props.pp.toFixed(0)}%</p>
+    </div>
   )
 }
 
@@ -27,9 +35,7 @@ const App = () => {
         <p className="fb-count">good: {good}</p>
         <p className="fb-count">neutral: {neutral}</p>
         <p className="fb-count">bad: {bad}</p>
-      <p>ratings given: {numberOfRatings}</p>
-      <p>average rating: {averageRating.toFixed(2)}</p>
-      <p>percent positive: {percentPositive.toFixed(0)}%</p>
+      <Statistics nor={numberOfRatings} ar={averageRating} pp={percentPositive} />
     </div>
   )
 }
